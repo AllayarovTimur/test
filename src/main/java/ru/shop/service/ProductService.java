@@ -7,12 +7,13 @@ import ru.shop.repository.IRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 @RequiredArgsConstructor
 public class ProductService {
 
     private final IRepository<Product> repository;
-
 
     public void save(Product product) {
         repository.save(product);
@@ -31,4 +32,9 @@ public class ProductService {
         }
         return result;
     }
+
+    public Optional<Product> getById (UUID id){
+        return repository.findById(id);
+    }
+
 }

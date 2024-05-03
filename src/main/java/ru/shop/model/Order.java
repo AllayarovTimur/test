@@ -10,9 +10,9 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Order {
-    UUID id;
-    UUID customerId;
-    UUID productId;
-    long count;
-    long amount;
+    private UUID id;
+    private UUID customerId;
+    private UUID productId;
+    private long count;
+    private long amount;
 }

@@ -5,6 +5,7 @@ import ru.shop.model.Customer;
 import ru.shop.repository.IRepository;
 
 import java.util.List;
+import java.util.UUID;
 
 @RequiredArgsConstructor
 public class CustomerService {
@@ -19,4 +20,7 @@ public class CustomerService {
         return repository.findAll();
     }
 
+    public Customer getById (UUID id){
+        return repository.findById(id);
+    }
 }

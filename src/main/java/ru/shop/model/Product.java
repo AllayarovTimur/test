@@ -10,8 +10,8 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product {
-    UUID id;
-    String name;
-    long cost;
-    ProductType productType;
+    private UUID id;
+    private String name;
+    private long cost;
+    private ProductType productType;
 }

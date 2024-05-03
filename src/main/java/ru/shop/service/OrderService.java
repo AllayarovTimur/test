@@ -1,6 +1,7 @@
 package ru.shop.service;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.GetMapping;
 import ru.shop.exception.BadOrderCountException;
 import ru.shop.model.Customer;
 import ru.shop.model.Order;
@@ -9,12 +10,14 @@ import ru.shop.repository.IRepository;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @RequiredArgsConstructor
 public class OrderService {
 
     private final IRepository<Order> repository;
+
 
     public void add(Customer customer, Product product, long count) {
         if (count <= 0) {
@@ -47,4 +50,8 @@ public class OrderService {
         return repository.findAll();
     }
 
+    public Optional<Order> getById (UUID id){
+        return repository.findById(id);
+    }
 }
+

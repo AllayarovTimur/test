@@ -10,8 +10,8 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Customer {
-    UUID id;
-    String name;
-    String phone;
-    long age;
+    private UUID id;
+    private String name;
+    private String phone;
+    private long age;
 }
